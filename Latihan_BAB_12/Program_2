@@ -10,9 +10,8 @@
  $pengirim = addslashes (strip_tags ($_POST['pengirim']));
  //insert ke tabel
  $query = "INSERT INTO berita 
-VALUES('','$kategori','$judul','$headline','$isi_berita','$pengir
-im', now())";
- $sql = mysql_query ($query);
+VALUES('','$kategori','$judul','$headline','$isi_berita', now())";
+ $sql =  ($query);
  if ($sql) {
  echo "<h2><font color=blue>Berita telah
 berhasil ditambahkan</font></h2>";
@@ -49,8 +48,8 @@ gagal ditambahkan</font></h2>";
      <?
      $query = "SELECT id_kategori, nm_kategori
     FROM kategori ORDER BY nm_kategori";
-     $sql = mysql_query ($query);
-     while ($hasil = mysql_fetch_array ($sql)) {
+     $sql =  ($query);
+     while ($hasil =  ($sql)) {
      echo "<option
     value='$hasil[id_kategori]'>$hasil[nm_kategori]</option>";
      }
